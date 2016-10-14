@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.js"></script>
+    
+    <script>
+        function setup() {
+            createCanvas(800,600);
+            
+            //Base
+            stroke("brown")
+            fill(75,85,90)
+            ellipse(450,250,325,450);
+            
+            //Core
+            stroke("gold")
+            fill(50,55)
+            ellipse(450,250,250,410);
+            
+            
+            //Left Eye
+            stroke("lime")
+            ellipse(375,200,70,70);
+            
+            //Right Eye
+            stroke("orange")
+            ellipse(525,200,70,70);
+            
+            //Glass Bars
+            stroke("gray")
+            fill(50,50)
+            rect(277,210,60,30);
+            rect(277,250,60,30);
+            rect(277,290,60,30);
+            rect(565,210,60,30);
+            rect(565,250,60,30);
+            rect(565,290,60,30);
+            
+            //Nose
+            strokeWeight(3);
+            line(450,200,450,350);
+            
+            //Details 
+            fill(100)
+            textSize(12)
+            text("The Mirror Shield - This Shield is made from the finest glass as it reflects everything, even the nagging of your girlfriend!",120,500)
+            
+        }
+
+        function draw() {
+            
+        }
+    </script>
+</head>
+
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/USERNAME/p5js/blob/gh-pages/FILENAME.html?footer=0"></script>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+
+
+</html>
