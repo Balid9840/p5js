@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/addons/p5.sound.js"></script>
+
+    <script>
+    var ears = 0;
+    var red,blue,green;
+        function preload() {
+
+            downloads = loadSound('megaman.mp3')
+        }
+
+        function setup() {
+            red = random(0,175);
+            blue = random(0,175);
+            green = random(0,175);
+            createCanvas(800, 600);
+            background(red,blue,green);
+
+
+        }
+
+        function draw() {
+            red += random(-1,1);
+            blue += random(-1,1);
+            green += random(-1,1);
+            if (mouseIsPressed&&ears!= 1) {
+                background(red,blue,green)
+                downloads.setVolume(0.1);
+                downloads.play('megaman');
+                ears = 1;
+            red = constrain(red,0,175);
+            blue = constrain(blue,0,175);
+            green = constrain(green,0,175);
+            console.log(red);
+            
+                
+                
+            }
+            
+
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
